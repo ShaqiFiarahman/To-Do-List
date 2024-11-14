@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://live.staticflickr.com/8159/28418275310_2bba496227_h.jpg");
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+}
+
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+main {
+  min-height: 100vh;
+}
+
+main section#todos {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+main section#todos div.todo {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(233, 233, 233);
+}
+
+main section#todos div.todo .btn-edit {
+  border: 0;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main section#todos div.todo .btn-edit:hover {
+  filter: brightness(80%);
+}
+
+main section#todos div.todo-option {
+  background-color: #faf8f8;
+  height: 2rem;
+
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  display: none;
+}
+
+main section#todos div.todo-option button {
+  border: 0;
+  cursor: pointer;
+  width: 64px;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+main section#todos div.todo-option button:nth-of-type(1) {
+  background-color: green;
+  color: white;
+}
+
+main section#todos div.todo-option button:nth-of-type(2) {
+  background-color: rgb(216, 166, 0);
+  color: white;
+}
+
+main section#todos div.todo-option button:nth-of-type(3) {
+  background-color: rgb(218, 27, 27);
+  color: white;
+}
+
+main section#todos div.todo-option button:hover {
+  filter: brightness(85%);
+}
+
+body .btn-add {
+  position: fixed;
+  z-index: 100;
+  left: 10px;
+  bottom: 10px;
+
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+
+  background-color: rgb(47, 134, 30);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body div#add-new,
+body div#edit-new {
+  position: fixed;
+  z-index: 100;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: none;
+}
+
+body div#add-new form,
+body div#edit-new form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+body div#add-new form input[type="text"],
+body div#add-new form input[type="date"],
+body div#add-new form button,
+body div#edit-new form input[type="text"],
+body div#edit-new form input[type="date"],
+body div#edit-new form button {
+  border: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+}
+
+body div#add-new form button[type="submit"],
+body div#edit-new form button[type="submit"] {
+  cursor: pointer;
+  background-color: rgb(58, 58, 219);
+  color: white;
+}
+
+body div#add-new form button[type="submit"]:hover,
+body div#edit-new form button[type="submit"]:hover {
+  filter: brightness(85%);
+}
+
+body div#add-new form button,
+body div#edit-new form button {
+  cursor: pointer;
+  background-color: rgb(219, 90, 58);
+  color: white;
+}
+
+body div#add-new form button:hover,
+body div#edit-new form button:hover {
+  filter: brightness(85%);
+}
